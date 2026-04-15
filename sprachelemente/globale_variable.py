@@ -4,8 +4,6 @@
 #wird die globale Variable innerhalb der Funktion überschattet und es entsteht eine lokale Variable.
 #Wert der Globalen Variable bleibt unverändert
 def funktion_ausgabe():
-    #Wert der globalen Variable wird ausgegeben
-    globale_variable = "Ich bin eine lokale Variable"
     print("In Funktion: ",globale_variable)
 
 #Definition einer globalen Variable
