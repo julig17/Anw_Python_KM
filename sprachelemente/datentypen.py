@@ -26,3 +26,4 @@ print(type(wert))
 
 wert = "Hallo"
 print(type(wert))
+

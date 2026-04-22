@@ -1,5 +1,7 @@
 #schreibender ZUgriff auf globale Variable durch Schlüsselwort global
-def funktion_ausgabe():       
+def funktion_ausgabe():
+    global globale_variable
+    print("In Funktion  global: ",globale_variable)      
     globale_variable = "Ich bin lokal Variable"
     print("In Funktion : ",globale_variable)
 
