@@ -40,3 +40,16 @@ else:
 		preis = preis * (1 - 0.05)
 print("Berechneter Preis: ", preis)
 
+
+match zahl:
+    case 1|2|3|4|5:
+        print("Wochentag")
+    case 6|7:
+        print("Wochenende!")
+    case _:
+        print("Kein Wochentag")
+
+#alle Nullwerte oder leeren Objekte sind False
+if(not(0 or 0.0 or "" or [] or False or None)):
+    print("Alles False")
+
