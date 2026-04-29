@@ -25,3 +25,11 @@ za% = 5 % 3
 zahl = 4
 Zahl = 4
 """
+
+neue_zahl = 35
+if (neue_zahl % 2):
+    print("gerade")
+
+wort = "Hallo"
+wort2 = "du"
+print (wort+wort2)
