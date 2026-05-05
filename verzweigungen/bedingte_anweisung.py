@@ -1,14 +1,19 @@
-#einfache bedingte Anweisung
 
-zahl = 40
-#zahl = 41
-if(zahl %2 == 0):
-    print("Gerade")
 
-#einfache bedingte Anweisung mit mehreren Anweisungen richtig einrücken
+#Wenn die Zahl gerade ist, gebe „Gerade“ aus.
+#Wenn die Zahl ungerade ist, gebe „Ungerade“ aus.
+#Aber auf jedenfall gebe die Zahl aus
 
-zahl = 40
-#zahl = 41
-if(zahl %2 == 0):
-    print("Gerade")
-    print("Das soll nur passieren wenn die Bedingung true ist")
+zahl = 9
+modulo = zahl % 2
+
+if (modulo  == 0):
+   print("Gerade")
+   zahl += 2
+else:
+   print("Ungerade")
+   zahl -= 1
+print(zahl)
+
+  
+
