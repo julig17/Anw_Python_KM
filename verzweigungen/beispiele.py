@@ -1,22 +1,24 @@
 #Verschachtelte Verzweigung
-zahl = 19
+zahl = 17
 
 if(zahl %2 == 0):
     print("Gerade")
 else:
     print("Ungerade")
     if(zahl % 3 == 0):
-        print(" und durch drei teilbar")
+        print("und durch drei teilbar")
     else:
-        print(" und ?")
+        print("und ?")
 
 #oder mit elif
 if(zahl %2 == 0):
     print("Gerade")
 elif(zahl % 3 == 0):
-    print("Ungerade \n und durch drei teilbar")
+    print("Ungerade")
+    print("und durch drei teilbar")
 else:
-    print("Ungerade \n und ?")
+    print("Ungerade")
+    print("und ?")
 
 
 preis = 5500

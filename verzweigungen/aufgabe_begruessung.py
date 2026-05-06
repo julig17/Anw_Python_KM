@@ -8,14 +8,13 @@ if(uhrzeit >= 10 and uhrzeit <= 17):
     uhrzeit_begruessung = "Guten Tag"
 elif(uhrzeit >= 18 and uhrzeit <= 24):
     uhrzeit_begruessung = "Guten Abend"
-else:
-    pass
 
-if(geschlecht == "m"):
+
+if(geschlecht == "m" or geschlecht_text == "M"):
     geschlecht_text = "Herr"
-elif(geschlecht == "w"):
+elif(geschlecht == "w" or geschlecht_text == "W"):
     geschlecht_text = "Frau"
 else:
-    pass
+    geschlecht_text = "Divers"
 
 print(f"{uhrzeit_begruessung} {geschlecht_text} {name}")
