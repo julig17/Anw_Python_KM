@@ -1,7 +1,7 @@
-zeichenkette = "Systemintegration"
+zeichenkette = "Datenverarbeitung"
 
 for buchstabe in zeichenkette:
-    if buchstabe.lower() == "l":
+    if buchstabe.lower() == "n":
         break
     print(buchstabe)
 else:
