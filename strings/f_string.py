@@ -17,7 +17,7 @@ print(f"Der Flächeninhalt des {'Rechteckes'
 
 
 
-preis = 59.49
+preis = 0.49
 print(f"Preis: {preis:.2f}")
 print(f"Preis: {preis:10.2f}")
 print(f"Preis: {preis:010.2f}")
@@ -31,3 +31,5 @@ zahl = 225
 f_zahl = 5.5
 print(3*(f"|{text:^15s}||{zahl:>15d}||{f_zahl:>15.2f}|\n"))
 
+text = "Alle lieben Python"
+print(text[::-1])
