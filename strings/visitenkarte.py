@@ -1,13 +1,15 @@
+
 eingabe_daten = input("Gebe  kommasepariert Personendaten ein:\n" \
 "Beispiel : Vorname, Nachname, Straße, Ort, Telefonnummer:")
 
-assertion_nachricht = "Du hast nicht genügend Daten eingegeben"
-assert eingabe_daten.count(",") >= 4, assertion_nachricht
 
-visitenkarte = '''Name: {0} {1} 
-Straße: {2} 
-Ort: {3} 
-Telefon: {4}'''
+assertion_nachricht = "Du hast nicht genügend Daten eingegeben"
+assert eingabe_daten.count(",") == 4, assertion_nachricht
+
+visitenkarte = '''Name:        {0} {1} 
+Straße:     {2} 
+Ort:        {3} 
+Telefon:    {4}'''
 
 '''Erste Möglichkeit: benutze nur Funktionen slicing, find()!
 noch keine Liste, Schleifen, Verzweigungen......'''
