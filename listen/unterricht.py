@@ -97,3 +97,7 @@ i = 0
 while i < len(automarken):
 	print(automarken[i])
 	i = i + 1
+
+
+
+liste = [15,5,2,8,1]

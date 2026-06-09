@@ -1,14 +1,25 @@
-m_liste = ["Hi", "Hallo", [1,244,2]]
-print(m_liste)
-print (m_liste[::1])
 
-for zeile in m_liste:
-    print("Element:", zeile)
-    for spalte in zeile:
-        print("  Unterelement:", spalte)
+e_liste = [1,2,1]
 
 
-wort = "Hallo"
-for buchstabe in wort:
-    print("Buchstabe:", buchstabe)
+#mehrdimensionale Liste
+m_liste = ["Hi", "Hallo", [1,244,2, ["Das", "wird", "toll"]]]
+#durch jedes Element durchlaufen und 
+for element in m_liste:
+    if type(element) == list:
+        for inneres_element in element:
+            print(inneres_element)
+    else:
+        print(element)
+print(element)
 
+
+
+mehrdimensionale_liste = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+
+for zeile in mehrdimensionale_liste:
+    ausgabe = ""
+    for inneres_ele in zeile:
+        ausgabe += str(inneres_ele) + "*"
+    print(ausgabe)
+    

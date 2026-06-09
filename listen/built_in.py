@@ -1,48 +1,44 @@
-meine_liste = ["Apfel", "Banane", "Kirsche"]
-print(meine_liste)
-gemuese_liste = ["Karotte", "Brokkoli", "Spinat"]
-meine_liste.append(gemuese_liste)
-print(meine_liste)
-print(len(meine_liste))
+fruechte_liste = ["Apfel", "Kirsche", "Banane"]
 
-meine_liste_2 = ["Apfel", "Banane", "Kirsche"]
-print(meine_liste_2)
-gemuese_liste = ["Karotte", "Brokkoli", "Spinat"]
-meine_liste_2.extend(gemuese_liste)
-print(meine_liste_2)
-print(len(meine_liste_2))
-print(meine_liste_2.count("Apfel"))
-meine_liste_2.append("Apfel")
-print(meine_liste_2.count("Birne")) 
+print(fruechte_liste)
 
-meine_liste_3 = ["Apfel", "Banane", "Kirsche"]
-meine_liste_3.insert(1, ["Birne", "Pfirsich"])
-print(meine_liste_3)
+fruechte_liste.append("Erdbeere")
+print(fruechte_liste)
 
+print(fruechte_liste.count("Apfel"))
 
+print(fruechte_liste.index("Kirsche"))
 
-meine_liste_4 = ["Apfel", "Banane", "Kirsche"]
-ele = meine_liste_4.pop()
-print(ele)
+gemuese_liste = ["Paprika", "Kartoffeln"]
+fruechte_liste.extend(gemuese_liste)
+print(fruechte_liste)
 
+fruechte_liste.insert(1, "Tomate")
+print(fruechte_liste)
 
+print(fruechte_liste.pop())
+print(fruechte_liste)
 
-meine_liste_5 = ["Apfel", "Banane", "Kirsche"] 
-gemuese_liste_1 = ["Karotte", "Brokkoli"]
-for index in range(len(gemuese_liste_1)):
-    meine_liste_5.insert(index + 5, gemuese_liste_1[index])
-print(meine_liste_5)
+zahlen = [3,2,5,8,2,9,7]
+zahlen.remove(2)
+print(zahlen)
+zahlen.reverse()
+print(zahlen)
+print(zahlen[::-1])
 
+zahlen.sort(reverse=True)
+print(zahlen)
 
-meine_liste_6 = ["Apfel", "Banane", "Kirsche", "Birne", "Pfirsich", "Kirsche"]
-meine_liste_6.remove("Kirsche")
-print(meine_liste_6)    
+print("**********************************************")
+zahlen_sort = [3,2,5,8,2,9,7]
+zahlen_sorted = [3,2,5,8,2,9,7]
+print(zahlen_sort.sort())
+print(zahlen_sort)
+#sorted verändert nicht die ursprüngliche Liste!
+neue_liste = sorted(zahlen_sorted)
+print("Sorttierte Liste: ", sorted(zahlen_sorted))
+print("Aber Liste intern nicht verändert: ", zahlen_sorted)
+print("Aber in neuer Liste kann man auch die sortierte Speichern: ", neue_liste)
 
-meine_liste_7 = ["Apfel","Banane", "Kirsche", "Birne", "Pfirsich", "Kirsche"]
-meine_liste_7.sort()        
-print(meine_liste_7)
-
-#Hier ein Fehler zum Demonstrieren, da Listen mit unterschiedlichen Datentypen 
-#nicht sortiert werden können
-#meine_liste_7 = ["Apfel", 2, 5 , ["Banane", "Kirsche", "Birne"], "Pfirsich", "Kirsche"]
-#meine_liste_7.sort()        
+fruechte_liste.clear()
+print(fruechte_liste)
