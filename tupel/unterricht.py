@@ -51,3 +51,39 @@ print(nachname)
 
 koordinaten = (1,5)
 x,y = koordinaten
+
+#wird zu Tupel
+kurz = 1,2,5
+print(type(kurz))
+
+kurz += koordinaten
+print(kurz)
+
+
+autoren =  ["Goethe", "Broente", "Hugo"]
+
+buecher = ["Faust", "Violette"]
+
+autoren_tupel = tuple(autoren)
+buecher_tupel = tuple(buecher)
+
+#ZUsicherung dass beide Tupel die gleiche Anzahl an Elementen hat
+#assert len(autoren_tupel) == len(buecher_tupel)
+
+wieder_liste = list(autoren_tupel)
+
+print("*" *20)
+print(len(autoren_tupel))
+print(autoren_tupel[2])
+print("*" *20)
+for autor in autoren_tupel:
+    print(autor)
+
+#range(len(autoren_tupel liefer eine Sequenz 0,1,2
+for index in (range(len(autoren_tupel))):
+    try:
+        print(f"Auf Position {index} schreibt der Autor {autoren_tupel[index]} das Buch {buecher_tupel[index]}")
+    except IndexError as fehler :
+        print(fehler)
+
+
