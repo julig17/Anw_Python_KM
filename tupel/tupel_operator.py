@@ -37,4 +37,6 @@ t1 = (1,2,3,4,5)
 t1_new = t1[:-1]
 print(t1_new)
 print(t1)
+
+
  

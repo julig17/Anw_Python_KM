@@ -62,7 +62,12 @@ print(kurz)
 
 autoren =  ["Goethe", "Broente", "Hugo"]
 
-buecher = ["Faust", "Violette"]
+buecher = ["Faust", "Violette", "Die Elenden", "Schülerlexikon"]
+buecher1 = ["Faust", "Violette", "Die Elenden"]
+
+buecher_autoren = list(zip(autoren, buecher))
+print("+" *20)
+print(buecher_autoren)
 
 autoren_tupel = tuple(autoren)
 buecher_tupel = tuple(buecher)
@@ -85,5 +90,10 @@ for index in (range(len(autoren_tupel))):
         print(f"Auf Position {index} schreibt der Autor {autoren_tupel[index]} das Buch {buecher_tupel[index]}")
     except IndexError as fehler :
         print(fehler)
+
+try:
+    print(autoren_tupel.index("Ross"))
+except ValueError as fehler:
+    print(f"Dieser Autor taucht nciht auf: {fehler}")
 
 
