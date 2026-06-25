@@ -8,7 +8,7 @@ def berechne_gesamtumsatz(umsaetze):
     args:
         umsätze (list): Liste mit numerischen Zahlen
     returns: 
-        float: Durchschnitt aller Zahlen
+        float: Summe aller Zahlen
     
     """
     summe = 0
@@ -50,3 +50,18 @@ def rabatt_anwenden(*, umsaetze, rabatt):
         neue_preise.append(umsatz * (1 - rabatt / 100))
 
     return neue_preise
+
+
+def berechne_umsatz(umsaetze):
+    """ Methode um den Gesamtumsatz  zu berechen 
+    
+    args:
+        umsätze (list): Liste mit numerischen Zahlen
+    returns: 
+        float: Summe aller Zahlen
+
+    """
+    if not umsaetze:
+        return 0
+    return umsaetze[0] + berechne_umsatz(umsaetze[1:])
+

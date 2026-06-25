@@ -58,3 +58,19 @@ def berechne_prozentsatz(*, prozentwert, grundwert):
         float: Der berechnete Prozentsatz.
     """
     return prozentwert * 100 / grundwert
+
+def berechne_kapital(jahre, kapital, zins):
+    """
+    Berechnet das KApital mit Zinseszinsen.
+
+    Args:
+        jahre (int) : Anzahl der Jahre
+        Kapital (float): Der gegebene AnfangsKapital.
+        zins (float): Der Zinssatz.
+
+    Returns:
+        float: Der berechnete Endkapital.
+    """
+    if jahre == 0:
+        return kapital
+    return berechne_kapital(jahre - 1, kapital * (1 + zins/100), zins)

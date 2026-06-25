@@ -14,6 +14,9 @@ print(kr.berechne_grundwert(prozentwert=1000, prozentsatz=1))
 print(kr.berechne_grundwert(prozentwert=200, prozentsatz=25))
 print(kr.berechne_prozentsatz(grundwert=200, prozentwert=20))
 
+#Zinseszinsen
+print(f"EndKapital: {kr.berechne_kapital(jahre=10, kapital=10000, zins=2):.2f}")
+
 
 umsaetze = [2500, 575.45, 222.99, 40.50, 10.39]
 gesamt_umsatz = ka.berechne_gesamtumsatz(umsaetze)
@@ -22,3 +25,5 @@ max_umsatz = ka.max_umsatz(umsaetze)
 print(f"Max Umsatz: {max_umsatz:.2f} €")
 rabattierte_umsaete = ka.rabatt_anwenden(umsaetze=umsaetze, rabatt=1)
 print(f"Rabattierte Umätze: {', '.join(f'{umsatz:.2f} €' for umsatz in rabattierte_umsaete)}")
+umsatz_gesamt = ka.berechne_umsatz(umsaetze)
+print(f"GesamtUmsatz: {umsatz_gesamt:.2f} €")
