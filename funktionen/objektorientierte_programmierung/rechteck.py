@@ -5,6 +5,8 @@ Das Rechteck bietet die Methode flaeche und zmfang an, mit denen man
 den Flächenumfang und den Umfang des Rechtecks bestimmen kann.
 
 """
+
+#das ist ein normaler KOmmentar
 class Rechteck:
     def __init__(self, laenge, breite):
         self.laenge = laenge

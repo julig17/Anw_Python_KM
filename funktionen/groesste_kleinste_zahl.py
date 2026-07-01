@@ -3,9 +3,34 @@
 #als Tupel(größte, kleinste) zurückgibt.  
 
 def groesste_kleinste_zahl(zahlen_liste):
-    groesste = max(zahlen_liste)
-    kleinste = min(zahlen_liste)
+    #groesste = max(zahlen_liste)
+    #kleinste = min(zahlen_liste)
+    groesste = meine_max_fkt(zahlen_liste)
+    kleinste = meine_min_fkt(zahlen_liste)
     return (groesste, kleinste) 
+
+def meine_max_fkt(zahlen_liste):
+    if len(zahlen_liste) == 0:
+        return -1
+    if len(zahlen_liste) == 1:
+        return zahlen_liste[0]
+    max = zahlen_liste[0]
+    for zahl in zahlen_liste:
+        if zahl > max:
+            max = zahl
+    return max
+
+
+def meine_min_fkt(zahlen_liste):
+    if len(zahlen_liste) == 0:
+        return -1
+    if len(zahlen_liste) == 1:
+        return zahlen_liste[0]
+    min = zahlen_liste[0]
+    for zahl in zahlen_liste:
+        if zahl < min:
+            min = zahl
+    return min
 
 #Beispielaufruf
 zahlen = [34, 12, 5, 67, 23, 89, 1]
