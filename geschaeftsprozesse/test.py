@@ -20,6 +20,8 @@ print(f"EndKapital: {kr.berechne_kapital(jahre=10, kapital=10000, zins=2):.2f}")
 
 umsaetze = [2500, 575.45, 222.99, 40.50, 10.39]
 gesamt_umsatz = ka.berechne_gesamtumsatz(umsaetze)
+if(gesamt_umsatz == -1):
+    print("KEine Umsätze")
 print(f"GesamtUmsatz: {gesamt_umsatz:.2f} €")
 max_umsatz = ka.max_umsatz(umsaetze)
 print(f"Max Umsatz: {max_umsatz:.2f} €")
