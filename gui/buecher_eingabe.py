@@ -1,4 +1,5 @@
 import tkinter as tk
+import buch as b
 
 
 def speichern():
@@ -10,13 +11,17 @@ def speichern():
     titel = entry_titel.get()
     erscheinungsjahr = entry_erscheinungsjahr.get()
 
-    print("Buchdaten")
-    print(f"ISBN : {isbn}")
-    print(f"Autor: {autor}")
-    print(f"Titel: {titel}")
-    print(f"Erscheinungsjahr: {erscheinungsjahr}")
-    print("-" * 30)
+    dump_wert(isbn, autor, titel, erscheinungsjahr)  
 
+def dump_wert(isbn, autor, titel, erscheinungsjahr):
+    b.buch_dict["isbn"] = isbn
+    b.buch_dict["autor"] = autor
+    b.buch_dict["titel"] = titel
+    b.buch_dict["erscheinungsjahr"] = erscheinungsjahr
+
+    for schluessel in  b.buch_dict:
+        print(f"{schluessel} -> { b.buch_dict[schluessel]}")
+  
 
 # Fenster erstellen
 fenster = tk.Tk()

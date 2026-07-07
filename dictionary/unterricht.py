@@ -27,11 +27,7 @@ for key in personen_dict:
 
 person = {"vornamen" : "Julia", "nachnamen" : "Greif", "alter" : 40, "hobbys" :["Lesen", "Schwimmen"]}
 
-buch = {"isbn" : "123", "titel" : "Titel", "autor" : "Autor", "erscheinungsjahr" : "1933"}
-print(buch["isbn"])
-buch["isbn"] = "893"
-print(buch["isbn"])
-print(len(buch))
+
 
 
 liste = [2,5,5,15]
