@@ -1,5 +1,6 @@
 import tkinter as tk
 import buch as b
+import dump_excel as de
 
 
 def speichern():
@@ -19,8 +20,11 @@ def dump_wert(isbn, autor, titel, erscheinungsjahr):
     b.buch_dict["titel"] = titel
     b.buch_dict["erscheinungsjahr"] = erscheinungsjahr
 
-    for schluessel in  b.buch_dict:
-        print(f"{schluessel} -> { b.buch_dict[schluessel]}")
+    #for schluessel in  b.buch_dict:
+        #print(f"{schluessel} : { b.buch_dict[schluessel]}")
+    
+
+    de.schreibe_in_excel(b.buch_dict)
   
 
 # Fenster erstellen
