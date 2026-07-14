@@ -1,4 +1,26 @@
+
 liste = ["Hallo", "Welt", 123, "Python"]
+index = 0
+try: 
+    while True:
+        print(liste[index])
+        index  = index +1
+except (KeyError, NameError) as exc1:
+    print ("Diese Fehler sind aufgetrete")
+except Exception as excep:
+    print(excep)
+
+#liste.keys()
+#print(liste[7])
+
+#print(int("fünf"))
+
+dict = {"Name": "Apfel", "Farbe": "Rot", 0 : "Null"}
+#print(dict1[0])
+
+
+
+"""
 try:
     for index in range(len(liste)+1):
         print(liste[index])
@@ -72,3 +94,4 @@ print(dateiname)
 
 #open("nicht_da.txt", "r")
 #FileNotFoundError: [Errno 2] No such file or directory: 'nicht_da.txt' 
+"""
