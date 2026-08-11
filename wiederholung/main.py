@@ -12,8 +12,15 @@ def lese_aus_datei(dateiname):
 
 def entferne_whitespaces(inhalt):
     for i in range(len(inhalt)):
-        inhalt[i] = inhalt[i].strip()
+        inhalt[i] = inhalt[i].strip()   
     return inhalt
+
+
+def verarbeite_artikel(inhalt):
+    for i in range(len(inhalt)):
+        inhalt[i] = inhalt[i].split(';')   
+    return inhalt
+
 
 
 datei_name = "./wiederholung/artikel.txt"
@@ -21,6 +28,7 @@ inhalt = lese_aus_datei(datei_name)
 
 if len(inhalt) > 0:
     inhalt = entferne_whitespaces(inhalt)
+    inhalt = verarbeite_artikel(inhalt)
     print(inhalt)
 else:
     print("Datei ist leer")
