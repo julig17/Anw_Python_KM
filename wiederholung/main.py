@@ -10,25 +10,20 @@ def lese_aus_datei(dateiname):
         print("sonstige Dateifehler", e)  
     return inhalt
 
-def entferne_whitespaces(inhalt):
+def entferne_whitespaces_und_verarbeite_artikel(inhalt):
     for i in range(len(inhalt)):
-        inhalt[i] = inhalt[i].strip()   
+        inhalt[i] = inhalt[i].strip().split(';') 
+        inhalt[i][0] = int(inhalt[i][2])  # Artikelnummer
+        inhalt[i][2] = float(inhalt[i][2])  # Preis
+        inhalt[i][3] = int(inhalt[i][3])    # Menge 
     return inhalt
-
-
-def verarbeite_artikel(inhalt):
-    for i in range(len(inhalt)):
-        inhalt[i] = inhalt[i].split(';')   
-    return inhalt
-
 
 
 datei_name = "./wiederholung/artikel.txt"
 inhalt = lese_aus_datei(datei_name)
 
 if len(inhalt) > 0:
-    inhalt = entferne_whitespaces(inhalt)
-    inhalt = verarbeite_artikel(inhalt)
+    inhalt = entferne_whitespaces_und_verarbeite_artikel(inhalt)
     print(inhalt)
 else:
     print("Datei ist leer")
