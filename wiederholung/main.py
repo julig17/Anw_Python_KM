@@ -1,3 +1,4 @@
+#Konstanten
 NUMMER = "nummer"
 BEZEICHNUNG = "bezeichnung"
 PREIS = "preis"
@@ -46,13 +47,47 @@ def dump_in_dictionary(artikel_liste):
         artikel_liste_dict.append(artikel_dict)
     return artikel_liste_dict   
 
+
+def ausgabe(inhalt_als_dict):
+    print("Ausgabe der Daten:")
+    for artikel in inhalt_als_dict:
+        print(f"{artikel[NUMMER]} -  {artikel[BEZEICHNUNG]} - {artikel[PREIS]:.2f} - {artikel[BESTAND]}")
+
+def ausgabe_gefiltert(inhalt_als_dict, filtere_nach=None, anzahl=None):
+    print("\nGefilterte Ausgabe der Daten:")
+    for artikel in inhalt_als_dict:
+        if filtere_nach == BESTAND and artikel[BESTAND] < anzahl:
+            print(f"{artikel[BEZEICHNUNG]}")
+
+
+def berechne_artikel_wert(inhalt_als_dict):
+    print("\nWert pro Artikel:")
+    for artikel in inhalt_als_dict:
+        wert = artikel[PREIS] * artikel[BESTAND]
+        print(f"{artikel[BEZEICHNUNG]} - {wert:.2f}")
+
+def berechne_artikel_gesamtwert(inhalt_als_dict):
+    gesamtwert = 0
+    for artikel in inhalt_als_dict:
+        wert = artikel[PREIS] * artikel[BESTAND]
+        gesamtwert += wert
+    print(f"\nGesamtwert des Lagers:  - {gesamtwert:.2f}")
+
 datei_name = "./wiederholung/artikel.txt"
 inhalt = lese_aus_datei(datei_name)
 
 if len(inhalt) > 0:
+    #verarbeiten Daten in Liste
     inhalt = entferne_whitespaces_und_verarbeite_artikel(inhalt)
+    #Daten in geeignete Datenstruktur umwandeln
     artikel_liste_als_dict = dump_in_dictionary(inhalt)
-    print(artikel_liste_als_dict)
+    #formatierte Ausgabe
+    ausgabe(artikel_liste_als_dict)
+    #gefilterte Ausgabe
+    ausgabe_gefiltert(artikel_liste_als_dict, filtere_nach=BESTAND, anzahl=5)
+    #Lagerwert je Artikel
+    berechne_artikel_wert(artikel_liste_als_dict)
+    berechne_artikel_gesamtwert(artikel_liste_als_dict)
 else:
     print("Datei ist leer")
 
