@@ -1,8 +1,10 @@
 obst_liste = ["Apfel", "Banane", "Kirsche", "Dattel"]  
 print(type(obst_liste))
 
+
 obst_tupel = ("Apfel", "Banane", "Kirsche", "Dattel", "Apfel") 
 print(type(obst_tupel))
+print(obst_tupel[0])
 
 gemischte_tupel = (2.5, 3, "Apfel" , False)
 print(gemischte_tupel[1:3])
