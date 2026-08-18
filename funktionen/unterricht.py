@@ -7,11 +7,16 @@ def cpu_last_berechnen2(liste):
     assert len(liste) == 2
     return (liste[0] + liste[1]) / 2
 
+def schreibe_ausgabe():
+    print(1)
+
 ergebnis_zahlen = cpu_last_berechnen1(40, 60)
 print(ergebnis_zahlen)
 
 ergebnis_liste = cpu_last_berechnen2([20,50])
 print(ergebnis_liste)
+
+schreibe_ausgabe()
 
 
 def subtrahiere_zahlen(minuend, subtrahend):
