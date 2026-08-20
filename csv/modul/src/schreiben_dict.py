@@ -1,5 +1,5 @@
 import csv
-datei_name = "./csv/modul/data/artikel_w.csv"
+datei_name = "./csv/modul/data/artikel_w_dict.csv"
 # SpaltenListe mit Spaltennamen
 spalten_namen = ['Artikelnummer', 'Artikelname', 'Preis', 'Kategorie', 'Anzahl']
 # Daten vorbereiten (Liste von Dictionaries)
@@ -9,7 +9,7 @@ daten = [{'Artikelnummer': '1001', 'Artikelname': 'Tastatur', 'Preis': '29.99', 
 # CSV-Datei schreiben
 try:
     with open(datei_name, "w", encoding="UTF-8", newline="") as datei:
-        csv_writer = csv.DictWriter(datei, fieldnames=spalten_namen)
+        csv_writer = csv.DictWriter(datei, fieldnames=spalten_namen, delimiter=";")
         # Spaltenköpfe schreiben
         csv_writer.writeheader()
         # Datenzeilen schreiben

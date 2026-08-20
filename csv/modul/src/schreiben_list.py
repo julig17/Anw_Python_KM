@@ -1,13 +1,15 @@
 import csv
 datei_name = "./csv/modul/data/artikel_w.csv"
+
 # Artikel Daten
 zeilen = [["1001","Tastatur","29.99","Hardware","15"],
           ["1002","Maus","19.99","Hardware","30"],
-          ["1003","Headset","29.99","Hardware","25"]]
+          ["1003","Headset","29.99","Hardware","25"],
+          ["1004","Monitor","529.99","Hardware","5"]]
 # CSV-Datei zum Schreiben öffnen und CSV-Writer-Objekt erstellen
 try:
     with open(datei_name, "w", encoding="UTF-8", newline="") as datei:
-        csv_writer = csv.writer(datei)
+        csv_writer = csv.writer(datei, delimiter=";")
         # Spaltenköpfe schreiben
         csv_writer.writerow(['Artikelnummer', 'Artikelname', 'Preis', 'Kategorie', 'Anzahl'])
         # Datenzeilen schreiben
