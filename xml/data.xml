@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionary>
     <eintrag>
-        <schluessel typ="str">Hallo</schluessel>
-        <wert typ="int">0</wert>
+        <schluessel alter="30">Hallo</schluessel>
+        <wert alter="30">0</wert>
+        <unterelement>
+            <wert_unter>Das sind die Daten</wert_unter>
+        </unterelement>
     </eintrag>
     <eintrag>
         <schluessel typ="str">Welt</schluessel>
-        <wert typ="int">1</wert>
+        <wert alter="int">1</wert>
+        <unterelement>
+            <wert_unter>Das sind die Daten</wert_unter>
+        </unterelement>
     </eintrag>
 </dictionary>

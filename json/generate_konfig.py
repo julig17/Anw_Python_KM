@@ -26,6 +26,6 @@ dateiname = "./json/konfiguration.json"
 
 try:
   with open(dateiname, "w", encoding="UTF-8") as konfig_datei: 
-      json.dump(konfiguration, konfig_datei, indent=4)
+      json.dump(konfiguration, konfig_datei, indent=2)
 except Exception as ex:
    print(f"Zugrffsfehler beim Schreiben: {ex}")

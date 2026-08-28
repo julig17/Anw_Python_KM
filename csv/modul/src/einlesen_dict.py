@@ -14,7 +14,7 @@ except Exception as e:
     print("sonstiges Dateizugriffsfehler", e)
 
 
-print(zeilen_liste[0]['Preis'])
+print(float(zeilen_liste[0]['Preis']))
 
 
 for zeile in zeilen_liste:

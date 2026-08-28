@@ -2,11 +2,11 @@ import xml.etree.ElementTree as ElementTree
 
 dateiname = "./xml/data.xml"
 
-baum = ElementTree.parse(dateiname) 
+baum = ElementTree.parse(dateiname)
+print(type(baum)) 
 #hole Wurzelelement
 tag_dict = baum.getroot()
-
-print(tag_dict.tag)
+print("Wurzelement: ", tag_dict.tag)
 
 for kind_element in tag_dict:
     print("Kindelemente: ", kind_element.tag)
@@ -16,4 +16,6 @@ for kind_element in tag_dict:
     #tag Name
     print(f"Tag: {schluessel.tag} : {tag_inhalt} ")
     #Attribut vom Tag
-    print(f"Tag: {schluessel.get("typ")} ")
+    print(f"Tag: {schluessel.get("alter")} ")
+
+    

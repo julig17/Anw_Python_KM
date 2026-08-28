@@ -13,10 +13,12 @@ except FileNotFoundError as e:
 except Exception as e:
     print(f"Sonstiger Dateizugriffsfehler: {e}")
 
-print("So sieht der geparste JSON String aus")
-#print(personen_liste)
+#print("So sieht der geparste JSON String aus")
+#print(personen_liste[0]["alter"])
+#print(type(personen_liste[0]["alter"]))
+#print("-" * 10)
 
-print("-" * 10)
+
 
 #da unsere Daten in einer Liste liegen, können wir durch die liste iterieren 
 #und die Personen ausgeben
@@ -33,7 +35,6 @@ for person in personen_liste:
             print(f"Person: {eigenschaft} : {wert}")
     print("-" * 10)
 
-"""
 #Zeigt die Verschachtelung des JSON Dokumentes
     person1= personen_liste[0]
     name = person1["name"]
@@ -43,4 +44,3 @@ for person in personen_liste:
     #name_kind1 = kinder1["name"]
     #print(name_kind1)
 
-"""
